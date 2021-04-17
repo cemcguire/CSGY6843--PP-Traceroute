@@ -170,7 +170,7 @@ def get_route(hostname):
                     #You should add your responses to your lists here
                     #print("Type 11")
                     #print("%d   %.0fms %s %s" %(ttl, int(timeReceived - timeSent) *1000, addr[0], dest[0]))
-                    tracelist1 = [ttl,(timeReceived - timeSent) * 1000,addr[0],dest[0]]
+                    tracelist1 = [str(ttl),str((timeReceived - timeSent) * 1000) + 'ms',str(addr[0]),str(dest[0])]
                     tracelist2.append(tracelist1)
                     #Fill in end
                 elif types == 3:
@@ -180,7 +180,7 @@ def get_route(hostname):
                     #You should add your responses to your lists here
                     #print("Type 3")
                     #print("%d   %.0fms %s %s" %(ttl, int(timeReceived - timeSent) *1000, addr[0], dest[0]))
-                    tracelist1 = [ttl,(timeReceived - timeSent) * 1000,addr[0],dest[0]]
+                    tracelist1 = [str(ttl),str((timeReceived - timeSent) * 1000) + 'ms',str(addr[0]),str(dest[0])]
                     tracelist2.append(tracelist1)
                     #Fill in end
                 elif types == 0:
@@ -190,7 +190,7 @@ def get_route(hostname):
                     #You should add your responses to your lists here and return your list if your destination IP is met
                     #print("Type 0")
                     #print("%d   %.0fms %s %s" %(ttl, int(timeReceived - t) *1000, addr[0], dest[0]))
-                    tracelist1 = [ttl,(timeReceived - timeSent) * 1000,addr[0],dest[0]]
+                    tracelist1 = [str(ttl),str((timeReceived - timeSent) * 1000) + 'ms',str(addr[0]),str(dest[0])]
                     tracelist2.append(tracelist1)
                     #Fill in end
                 else:
@@ -204,7 +204,7 @@ def get_route(hostname):
             finally:
                 mySocket.close()
 
-    #print(tracelist2)
+    print(tracelist2)
     return tracelist2
 
 #if __name__ == '__main__':
