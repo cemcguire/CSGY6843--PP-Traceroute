@@ -127,7 +127,7 @@ def get_route(hostname):
                     #Fill in end
                 recvPacket, addr = mySocket.recvfrom(1024)
                 timeReceived = time.time()
-                print("timereceived: " + str(timeReceived))
+                #print("timereceived: " + str(timeReceived))
                 timeLeft = timeLeft - howLongInSelect
                 if timeLeft <= 0:
                     tracelist1 = [ttl,"*","Request timed out"]
@@ -204,7 +204,7 @@ def get_route(hostname):
             finally:
                 mySocket.close()
 
-    print(tracelist2)
+    #print(tracelist2)
     return tracelist2
 
 if __name__ == '__main__':
