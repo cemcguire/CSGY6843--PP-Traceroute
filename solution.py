@@ -60,7 +60,7 @@ def build_packet():
     header = struct.pack("bbHHh", ICMP_ECHO_REQUEST, 0, myChecksum, myID, 1)
     #print(header)
     data = struct.pack("d", time.time())
-    print("timesent: " + str(time.time()))
+    #print("timesent: " + str(time.time()))
     # Calculate the checksum on the data and the dummy header.
     myChecksum = checksum(header + data)
 
